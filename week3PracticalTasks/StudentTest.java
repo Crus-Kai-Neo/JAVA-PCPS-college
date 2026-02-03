@@ -4,36 +4,20 @@ package week3PracticalTasks;
 import java.util.Scanner;
 
 class StudentTest {
-
-    String newname;
-    int newage;
-
+    String name;
+    int age;
     StudentTest(String name, int age){
-        newname = name;
-        newage = age;
-
+        this.name = name;
+        this.age = age;
     }
-
-
-    void newdisplay() {
-        System.out.println("Name: " + newname);
-        System.out.println("Age: " + newage);
+    void display() {
+        System.out.println(name);
+        System.out.println(age);
     }
 }
-
-class Testing {
+class Test {
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the student's name: ");
-        String n = scanner.nextLine();
-
-        System.out.print("Enter the student's age: ");
-        int a = scanner.nextInt();
-
-        StudentTest s1 = new StudentTest(n,a);
-        s1.newdisplay();
-
-        scanner.close();
+        StudentTest s1 = new StudentTest("Swodesh",18);
+        s1.display();
     }
 }
